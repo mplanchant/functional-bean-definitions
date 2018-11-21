@@ -23,8 +23,7 @@ public class FunctionalBeanDefinitionsApplication implements ApplicationContextI
     @Override
     public void initialize(GenericApplicationContext context) {
         context.registerBean("upper", FunctionRegistration.class,
-                () -> new FunctionRegistration<>(uppercase())
-                        .type(FunctionType.from(String.class).to(String.class))
+                () -> new FunctionRegistration<>(uppercase()).type(FunctionType.from(String.class).to(String.class))
         );
     }
 }
