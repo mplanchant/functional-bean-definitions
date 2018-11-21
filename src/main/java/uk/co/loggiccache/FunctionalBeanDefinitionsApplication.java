@@ -10,8 +10,7 @@ import org.springframework.context.support.GenericApplicationContext;
 import java.util.function.Function;
 
 @SpringBootConfiguration
-public class FunctionalBeanDefinitionsApplication
-        implements ApplicationContextInitializer<GenericApplicationContext> {
+public class FunctionalBeanDefinitionsApplication implements ApplicationContextInitializer<GenericApplicationContext> {
 
     public static void main(String[] args) {
         FunctionalSpringApplication.run(FunctionalBeanDefinitionsApplication.class, args);
@@ -28,5 +27,4 @@ public class FunctionalBeanDefinitionsApplication
                         .type(FunctionType.from(String.class).to(String.class))
         );
     }
-
 }
